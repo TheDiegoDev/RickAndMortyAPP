@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.MainActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropDownGender"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Gender"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dropDownSpecies"
+        android:visibility="gone"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/auto_complete_species"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Species"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/resetFilter"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="Reset Filter"
+        android:layout_margin="10dp"
+        android:background="@color/purple_200"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp" />
+
+    <TextView
+        android:id="@+id/errorImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:text="Problems to download data please check connection or try later"
+        android:visibility="gone"/>
+
+</LinearLayout>
